@@ -1,0 +1,307 @@
+/* NodeStyles.module.css - Unified node styling */
+
+/* Base Node Container */
+.baseNode {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: relative;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.baseNode:hover {
+  box-shadow: 
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05),
+    0 0 0 2px rgba(99, 102, 241, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Node Header */
+.nodeHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  font-size: 13px;
+  color: #1f2937;
+  border-radius: 12px 12px 0 0;
+}
+
+.nodeIcon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 6px;
+}
+
+.nodeTitle {
+  flex: 1;
+  letter-spacing: -0.01em;
+}
+
+/* Node Content */
+.nodeContent {
+  padding: 12px 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Field Containers */
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fieldContainerRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.fieldLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Input Fields */
+.textInput,
+.numberInput,
+.selectInput {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #374151;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.textInput:focus,
+.numberInput:focus,
+.selectInput:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.textArea {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #374151;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  resize: vertical;
+  min-height: 60px;
+  font-family: inherit;
+}
+
+.textArea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.selectInput {
+  cursor: pointer;
+}
+
+/* Slider */
+.sliderInput {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e5e7eb;
+  outline: none;
+  cursor: pointer;
+}
+
+.sliderInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.sliderInput::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+/* Checkbox */
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: #6366f1;
+  cursor: pointer;
+}
+
+/* Handle Styles */
+.handleWrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.handle {
+  width: 12px !important;
+  height: 12px !important;
+  border: 2px solid #fff !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+  transition: transform 0.2s ease !important;
+}
+
+.handle:hover {
+  transform: scale(1.2) !important;
+}
+
+.handleTarget {
+  background: #6366f1 !important;
+}
+
+.handleSource {
+  background: #10b981 !important;
+}
+
+.handleLabel {
+  position: absolute;
+  font-size: 10px;
+  color: #6b7280;
+  white-space: nowrap;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* Color Themes */
+.nodeDefault .nodeHeader {
+  background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+.nodeBlue .nodeHeader {
+  background: linear-gradient(90deg, #dbeafe 0%, #bfdbfe 100%);
+}
+
+.nodeBlue .nodeIcon {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.nodeGreen .nodeHeader {
+  background: linear-gradient(90deg, #d1fae5 0%, #a7f3d0 100%);
+}
+
+.nodeGreen .nodeIcon {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.nodePurple .nodeHeader {
+  background: linear-gradient(90deg, #e9d5ff 0%, #d8b4fe 100%);
+}
+
+.nodePurple .nodeIcon {
+  background: rgba(139, 92, 246, 0.2);
+}
+
+.nodeOrange .nodeHeader {
+  background: linear-gradient(90deg, #fed7aa 0%, #fdba74 100%);
+}
+
+.nodeOrange .nodeIcon {
+  background: rgba(249, 115, 22, 0.2);
+}
+
+.nodeRed .nodeHeader {
+  background: linear-gradient(90deg, #fecaca 0%, #fca5a5 100%);
+}
+
+.nodeRed .nodeIcon {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.nodeTeal .nodeHeader {
+  background: linear-gradient(90deg, #99f6e4 0%, #5eead4 100%);
+}
+
+.nodeTeal .nodeIcon {
+  background: rgba(20, 184, 166, 0.2);
+}
+
+.nodePink .nodeHeader {
+  background: linear-gradient(90deg, #fbcfe8 0%, #f9a8d4 100%);
+}
+
+.nodePink .nodeIcon {
+  background: rgba(236, 72, 153, 0.2);
+}
+
+.nodeYellow .nodeHeader {
+  background: linear-gradient(90deg, #fef08a 0%, #fde047 100%);
+}
+
+.nodeYellow .nodeIcon {
+  background: rgba(234, 179, 8, 0.2);
+}
+
+.nodeIndigo .nodeHeader {
+  background: linear-gradient(90deg, #c7d2fe 0%, #a5b4fc 100%);
+}
+
+.nodeIndigo .nodeIcon {
+  background: rgba(99, 102, 241, 0.2);
+}
+
+/* Static Text */
+.staticText {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+/* Variable Handles (for TextNode) */
+.variableHandle {
+  position: absolute;
+  left: -6px;
+  display: flex;
+  align-items: center;
+}
+
+.variableLabel {
+  position: absolute;
+  left: 18px;
+  font-size: 10px;
+  color: #8b5cf6;
+  font-weight: 500;
+  white-space: nowrap;
+  background: rgba(139, 92, 246, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
