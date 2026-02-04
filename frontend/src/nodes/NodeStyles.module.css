@@ -41,8 +41,9 @@
   justify-content: center;
   width: 24px;
   height: 24px;
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(99, 102, 241, 0.8);
   border-radius: 6px;
+  color: #ffffff;
 }
 
 .nodeTitle {
@@ -204,12 +205,18 @@
   background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 100%);
 }
 
+.nodeDefault .nodeIcon {
+  background: #6b7280;
+  color: #ffffff;
+}
+
 .nodeBlue .nodeHeader {
   background: linear-gradient(90deg, #dbeafe 0%, #bfdbfe 100%);
 }
 
 .nodeBlue .nodeIcon {
-  background: rgba(59, 130, 246, 0.2);
+  background: #3b82f6;
+  color: #ffffff;
 }
 
 .nodeGreen .nodeHeader {
@@ -217,7 +224,8 @@
 }
 
 .nodeGreen .nodeIcon {
-  background: rgba(16, 185, 129, 0.2);
+  background: #10b981;
+  color: #ffffff;
 }
 
 .nodePurple .nodeHeader {
@@ -225,7 +233,8 @@
 }
 
 .nodePurple .nodeIcon {
-  background: rgba(139, 92, 246, 0.2);
+  background: #8b5cf6;
+  color: #ffffff;
 }
 
 .nodeOrange .nodeHeader {
@@ -233,7 +242,8 @@
 }
 
 .nodeOrange .nodeIcon {
-  background: rgba(249, 115, 22, 0.2);
+  background: #f97316;
+  color: #ffffff;
 }
 
 .nodeRed .nodeHeader {
@@ -241,7 +251,8 @@
 }
 
 .nodeRed .nodeIcon {
-  background: rgba(239, 68, 68, 0.2);
+  background: #ef4444;
+  color: #ffffff;
 }
 
 .nodeTeal .nodeHeader {
@@ -249,7 +260,8 @@
 }
 
 .nodeTeal .nodeIcon {
-  background: rgba(20, 184, 166, 0.2);
+  background: #14b8a6;
+  color: #ffffff;
 }
 
 .nodePink .nodeHeader {
@@ -257,7 +269,8 @@
 }
 
 .nodePink .nodeIcon {
-  background: rgba(236, 72, 153, 0.2);
+  background: #ec4899;
+  color: #ffffff;
 }
 
 .nodeYellow .nodeHeader {
@@ -265,7 +278,8 @@
 }
 
 .nodeYellow .nodeIcon {
-  background: rgba(234, 179, 8, 0.2);
+  background: #eab308;
+  color: #ffffff;
 }
 
 .nodeIndigo .nodeHeader {
@@ -273,7 +287,8 @@
 }
 
 .nodeIndigo .nodeIcon {
-  background: rgba(99, 102, 241, 0.2);
+  background: #6366f1;
+  color: #ffffff;
 }
 
 /* Static Text */

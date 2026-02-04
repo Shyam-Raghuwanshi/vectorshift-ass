@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { BaseNode } from './BaseNode';
+import { FiBookmark } from 'react-icons/fi';
 
 export const NoteNode = ({ id, data }) => {
   const [content, setContent] = useState(data?.content || '');
@@ -16,7 +17,7 @@ export const NoteNode = ({ id, data }) => {
     <BaseNode
       id={id}
       title="Note"
-      icon="📌"
+      icon={<FiBookmark size={16} />}
       color={color}
       fields={[
         {

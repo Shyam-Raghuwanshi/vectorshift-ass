@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import { Handle, Position } from 'reactflow';
 import styles from './NodeStyles.module.css';
+import { FiFileText } from 'react-icons/fi';
 
 // Regex to match valid JavaScript variable names in double curly braces
 const VARIABLE_REGEX = /\{\{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\}\}/g;
@@ -58,7 +59,7 @@ export const TextNode = ({ id, data }) => {
 
       {/* Header */}
       <div className={styles.nodeHeader}>
-        <span className={styles.nodeIcon}>📝</span>
+        <span className={styles.nodeIcon}><FiFileText size={16} /></span>
         <span className={styles.nodeTitle}>Text</span>
       </div>
 

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { BaseNode } from './BaseNode';
+import { FiPlusCircle } from 'react-icons/fi';
 
 export const MathNode = ({ id, data }) => {
   const [operation, setOperation] = useState(data?.operation || 'add');
@@ -14,7 +15,7 @@ export const MathNode = ({ id, data }) => {
     <BaseNode
       id={id}
       title="Math"
-      icon="🧮"
+      icon={<FiPlusCircle size={16} />}
       color="teal"
       inputs={[
         { id: 'a', label: 'A' },

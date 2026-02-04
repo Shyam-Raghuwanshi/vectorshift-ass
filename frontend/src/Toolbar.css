@@ -24,6 +24,9 @@
 
 .toolbar-logo {
   font-size: 24px;
+  color: #fbbf24;
+  display: flex;
+  align-items: center;
 }
 
 .toolbar-nodes {

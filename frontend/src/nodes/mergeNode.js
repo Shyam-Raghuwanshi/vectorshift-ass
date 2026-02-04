@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { BaseNode } from './BaseNode';
+import { FiGitMerge } from 'react-icons/fi';
 
 export const MergeNode = ({ id, data }) => {
   const [mergeStrategy, setMergeStrategy] = useState(data?.mergeStrategy || 'concat');
@@ -16,7 +17,7 @@ export const MergeNode = ({ id, data }) => {
     <BaseNode
       id={id}
       title="Merge"
-      icon="🔀"
+      icon={<FiGitMerge size={16} />}
       color="pink"
       inputs={[
         { id: 'input1', label: 'Input 1' },

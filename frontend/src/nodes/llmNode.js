@@ -2,13 +2,14 @@
 
 import { BaseNode } from './BaseNode';
 import styles from './NodeStyles.module.css';
+import { FiCpu } from 'react-icons/fi';
 
 export const LLMNode = ({ id, data }) => {
   return (
     <BaseNode
       id={id}
       title="LLM"
-      icon="🤖"
+      icon={<FiCpu size={16} />}
       color="purple"
       minWidth={280}
       inputs={[

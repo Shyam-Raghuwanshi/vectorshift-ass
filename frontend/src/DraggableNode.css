@@ -30,6 +30,9 @@
 
 .draggable-node-icon {
   font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
 }
 
 .draggable-node-label {

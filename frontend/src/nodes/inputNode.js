@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { BaseNode } from './BaseNode';
+import { FiDownload } from 'react-icons/fi';
 
 export const InputNode = ({ id, data }) => {
   const [currName, setCurrName] = useState(data?.inputName || id.replace('customInput-', 'input_'));
@@ -16,7 +17,7 @@ export const InputNode = ({ id, data }) => {
     <BaseNode
       id={id}
       title="Input"
-      icon="📥"
+      icon={<FiDownload size={16} />}
       color="blue"
       outputs={[{ id: 'value', label: 'Output' }]}
       fields={[

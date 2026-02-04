@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { BaseNode } from './BaseNode';
+import { FiGlobe } from 'react-icons/fi';
 
 export const ApiNode = ({ id, data }) => {
   const [method, setMethod] = useState(data?.method || 'GET');
@@ -18,7 +19,7 @@ export const ApiNode = ({ id, data }) => {
     <BaseNode
       id={id}
       title="API Request"
-      icon="🌐"
+      icon={<FiGlobe size={16} />}
       color="indigo"
       inputs={[
         { id: 'body', label: 'Body' },

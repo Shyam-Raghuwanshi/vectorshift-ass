@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { BaseNode } from './BaseNode';
+import { FiUpload } from 'react-icons/fi';
 
 export const OutputNode = ({ id, data }) => {
   const [currName, setCurrName] = useState(data?.outputName || id.replace('customOutput-', 'output_'));
@@ -16,7 +17,7 @@ export const OutputNode = ({ id, data }) => {
     <BaseNode
       id={id}
       title="Output"
-      icon="📤"
+      icon={<FiUpload size={16} />}
       color="green"
       minWidth={240}
       inputs={[{ id: 'value' }]}

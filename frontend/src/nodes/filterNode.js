@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { BaseNode } from './BaseNode';
+import { FiFilter } from 'react-icons/fi';
 
 export const FilterNode = ({ id, data }) => {
   const [condition, setCondition] = useState(data?.condition || 'equals');
@@ -16,7 +17,7 @@ export const FilterNode = ({ id, data }) => {
     <BaseNode
       id={id}
       title="Filter"
-      icon="🔍"
+      icon={<FiFilter size={16} />}
       color="orange"
       inputs={[{ id: 'input', label: 'Input' }]}
       outputs={[
