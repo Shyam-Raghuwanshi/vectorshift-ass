@@ -51,7 +51,6 @@ Pipeline Analysis Results
                 className="submit-button"
                 onClick={handleSubmit}
             >
-                <span className="submit-icon">🚀</span>
                 Submit Pipeline
             </button>
             <span className="submit-hint">
